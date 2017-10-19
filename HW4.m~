@@ -218,7 +218,7 @@ for t = 1:19
     smbgsub1 = smoothingbackground(imgbright8, 4, 2);
     mask = binarymask(smbgsub1);
     cleaned = cleanedmask(mask, 3);
-    [cell_number, mean_area, mean_intensity] = numberareaintensity(smbgsub1,cleanedmask);
+    [cell_number, mean_area, mean_intensity] = numberareaintensity(smbgsub1,cleanedmask)
     
     iplane = reader8.getIndex(1-1, 2-1, t-1)+1; %channel 2
     img82 = bfGetPlane(reader8, iplane);
@@ -227,7 +227,7 @@ for t = 1:19
     smbgsub1 = smoothingbackground(imgbright8, 4, 2);
     mask = binarymask(smbgsub1);
     cleaned = cleanedmask(mask, 3);
-    [cell_number, mean_area, mean_intensity] = numberareaintensity(smbgsub1,cleanedmask);
+    [cell_number, mean_area, mean_intensity] = numberareaintensity(smbgsub1,cleanedmask)
 end
 
 %Number of Cells
@@ -236,6 +236,8 @@ xlabel('Time');
 ylabel('Number of Cells');
 
 scatter(1:18,cell_number, 'filled'); %x = time, y = cells
+hold on;
+scatter(1:18,cell_number, 'filled');
 
 %Mean Intensity
 
@@ -244,7 +246,8 @@ xlabel('Time');
 ylabel('Mean Intensity');
 
 scatter(1:18, mean_intensity, 'filled'); %x = time, y = mean intensity
-
+hold on;
+scatter(1:18, mean_intensity, 'filled');
 
 
 
