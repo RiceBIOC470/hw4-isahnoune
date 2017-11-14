@@ -1,6 +1,21 @@
 %HW4
 %% 
 % Problem 1. 
+%GB comments:
+1a 100
+1b 100
+1c 100
+1d 50 Plots are correct, but please add axis labels to correctly convey the data you are displaying (did not take points off for this). In the future, because these graphs have different values along the Y axis, you can use the subplot function to display both graphs at the same time. If I run this section of code, the second plot will overwrite the first plot. This can appear to look as though only one plot was generated within the question ( I did NOT take points off for this). I did take half the points off because the second half of the question was not addressed where you were asked to explain the output of the plots. 
+2a 75 There is no saved file as the question asks. Also it is not clear what you are concatenating. Two files? Two channels? To get a max intensity of each channel (2 channels being used in the question), all that needs to be done following the Z-projection is to convert the image from a greyscale image to a composite.  This can be accomplished using the channel tool by clicking Image/Color/Channel Tool. Change the pulldown menu from greyscale to composite. 
+2b. 75 Need to iterate over Z direction. Currently the script is normalizing to the max intensity across 1 Z plane image. It needs to grab the max intensity across all Z sections (6 Z sections/ time point) for each time point.  
+3a. 50 Same issue as in 2b. I had to take off more points here because the entire point of the question is to ensure the student understands the concept of Z-space and how to manipulate the data. 
+3b 100
+3c 100
+3d 100
+3e 100
+4a. 100
+4b. 100
+ Overall = 88
 
 % 1. Write a function to generate an 8-bit image of size 1024x1024 with a random value 
 % of the intensity in each pixel. Call your image rand8bit.tif. 
